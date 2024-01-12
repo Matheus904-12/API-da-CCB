@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Listagem por Mês</title>
+</head>
+<body>
+  <div class="dashboard-container light-mode">
+    <div class="sidebar">
+      <div class="logo">
+        <h2>Versículos</h2>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+          <li><a href="#" class="active"><i class="fas fa-list"></i> Listagem por Mês</a></li>
+        </ul>
+      </div>
+      <div class="toggle-btn">
+        <span class="light-mode-btn" onclick="toggleMode()">Light Mode</span>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="header">
+        <h1>Listagem por Mês</h1>
+      </div>
+      <div class="content">
+        <div class="meses-container" id="mesesContainer">
+          <!-- Meses e quantidades serão exibidos aqui -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="meses.js"></script>
+</body>
+</html>

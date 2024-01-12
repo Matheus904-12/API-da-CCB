@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUD Igreja</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Versículos</h2>
+        <form id="form">
+            <label for="livro">Livro:</label>
+            <input type="text" id="livro" required>
+
+            <label for="capitulo">Capítulo:</label>
+            <input type="number" id="capitulo" required>
+
+            <label for="versiculo">Versículo:</label>
+            <input type="number" id="versiculo" required>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="auxiliar">Auxiliar:</label>
+            <input type="text" id="auxiliar">
+
+            <label for="data_culto">Data do Culto:</label>
+            <input type="date" id="data_culto" required>
+
+            <button type="button" onclick="registrarVersiculo()">Registrar</button>
+        </form>
+
+        <div id="versiculos-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

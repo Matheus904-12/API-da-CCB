@@ -55,9 +55,10 @@ function saveFuncionario() {
         funcionarios[id].salario = sSalario.value;
     } else {
         funcionarios.push({
+            'auxiliar': sAuxiliar.value,
             'nome': sNome.value,
             'funcao': sFuncao.value,
-            'salario': sSalario.value
+            'capitulo': sCapitulo.value,
         });
     }
 

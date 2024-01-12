@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ecf0f1;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding-top: 20px;
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar:hover {
+    width: 300px;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo h2 {
+    margin: 0;
+    color: #ecf0f1;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    padding: 15px;
+    border-bottom: 1px solid #34495e;
+  }
+  
+  .menu a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu a i {
+    margin-right: 10px;
+  }
+  
+  .menu a.active {
+    background-color: #1a252f;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .header h1 {
+    color: #333;
+  }
+  
+  .chart-container,
+  .registros-container,
+  .meses-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .registro-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .mes-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .toggle-btn {
+    text-align: center;
+    margin-top: auto;
+    padding-bottom: 20px;
+  }
+  
+  .light-mode-btn {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .dark-mode {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+  }
+  
+  .dark-mode .sidebar {
+    background-color: #34495e;
+  }
+  
+  .dark-mode .menu a {
+    color: #ecf0f1;
+  }
+  
+  .dark-mode .chart-container,
+  .dark-mode .registros-container,
+  .dark-mode .meses-container {
+    background-color: #34495e;
+    color: #ecf0f1;
+  }
+  
+  .dark-mode .registro-item,
+  .dark-mode .mes-item {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+  }
+  
+  .dark-mode .header h1 {
+    color: #ecf0f1;
+  }
+  
+  .form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .form-container input,
+  .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-container button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-container button:hover {
+    background-color: #2980b9;
+  }
+  
