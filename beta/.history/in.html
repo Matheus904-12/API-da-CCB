@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            font-size: 24px;
+        }
+
+        #iGugaBibleContainer {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #iGugaBibleContainer iframe {
+            width: 100%;
+            height: 500px; /* Ajuste conforme necessário */
+            border: none;
+        }
+
+        #footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            font-size: 14px;
+        }
+        .text-align {
+            border-radius: 15px;
+        }
+
+    </style>
+    <script type="text/javascript" src="https://www.iguga.org/js/igpostmessage.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            var iGugaBibleContainer = document.getElementById("iGugaBibleContainer");
+
+            if (typeof iGugaBibleContainer !== "undefined" && iGugaBibleContainer !== null) {
+                var iGugaBibleCustomLink = 'https://www.iguga.org/bible/searchFrame/ID/1612dca508867f6102edca7d9175281a';
+                var iGugaBibleFrameSource = iGugaBibleCustomLink + '?fromUrl=' + encodeURIComponent(document.location.href);
+                iGugaBibleContainer.innerHTML = '<iframe id="iGugaBibleFrame" src="' + iGugaBibleFrameSource + '" scrolling="no" frameborder="0" allowtransparency="true"></iframe>';
+            }
+        }
+
+        igPostMessage.receiveMessage(function(event) {
+            if ((!isNaN(event.data)) && (event.data > 0)) {
+                var iGugaBibleFrame = document.getElementById("iGugaBibleFrame");
+                if (typeof iGugaBibleFrame !== "undefined" && iGugaBibleFrame !== null) {
+                    iGugaBibleFrame.style.height = '100%';
+                    iGugaBibleContainer.style.height = event.data + 'px';
+                }
+            }
+        }, 'https://www.iguga.org');
+    </script>
+    <title>Minha Bíblia Online</title>
+</head>
+<body>
+    <h1>Minha Bíblia Online</h1>
+    <div id="iGugaBibleContainer"></div>
+    <div id="footer">
+        <a href="http://www.iguga.org/post/28/dicionario-biblico-site-blog" target="_blank">Dicionário Bíblico no seu site ou blog</a> | 
+        <a href="http://www.iguga.org/post/23/a-biblia-no-seu-site" target="_blank">A Bíblia no seu site ou blog</a>
+    </div>
+</body>
+</html>

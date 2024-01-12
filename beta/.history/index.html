@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CCB - Registro de Versículos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>CCB - Congregação Cristã do Brasil</h1>
+        <div class="form-container">
+
+            <label for="gender">Auxiliar</label>
+            <select id="gender2">
+                <option value="">Nenhum</option>
+                <option value="">Aline Gomes Santos</option>
+                <option value="">Alfredo Bruske Schuster</option>
+                <option value="">Alef Vinicius</option>
+                <option value="">José Victor Zeller Gonçalves</option>
+                <option value="">Jonas Amorim Lopes da Silva</option>
+                <option value="">Loraine de Assis Souza</option>
+                <option value="">Natália de Sena Marques</option>
+            </select>
+
+            <label for="name">Nome:</label>
+            <input type="text" id="name">
+
+            <label for="date">Data:</label>
+            <input type="date" id="date">
+
+            <label for="chapter">Livro e Capítulo:</label>
+            <input type="text" id="chapter">
+
+            <label for="verse">Versículo:</label>
+            <input type="text" id="verse">
+
+            <button onclick="openBible()">Abrir Bíblia</button>
+<br>
+            <label for="gender">Gênero:</label>
+            <select id="gender">
+                <option value="women">Mulheres</option>
+                <option value="men">Homens</option>
+            </select>
+
+            <button onclick="registerVerse()">Registrar</button>
+            
+        </div>
+    </div>
+
+    <div class="record-container">
+        <h2>Registros</h2>
+        <ul id="record-list">
+            <!-- Os registros serão adicionados aqui dinamicamente -->
+        </ul>
+        <ul id="record-details">
+            <!-- Os detalhes dos registros serão adicionados aqui dinamicamente -->
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
