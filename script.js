@@ -204,6 +204,4 @@ function showButtons(event) {
     }
 }
 
-=======
- 
->>>>>>> c7cadf96569855e80ebd59c905f0c67be18b7ee2
+
