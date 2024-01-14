@@ -54,8 +54,8 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 10px 0;        
-        align-items: center;
+        margin: 10px 0;        padding-right: 0px;
+
     }
 
     .records th:last-child,

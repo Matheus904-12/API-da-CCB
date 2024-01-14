@@ -48,14 +48,14 @@
         background-color: white;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 0px;
+        right: ;
     }
 
     .records td {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 10px 0;        
-        align-items: center;
+        margin: 10px 0;
     }
 
     .records th:last-child,
