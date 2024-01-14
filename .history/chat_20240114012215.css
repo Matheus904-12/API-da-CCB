@@ -42,7 +42,7 @@
 
     .records tr {
         border-radius: 10px;
-        display: block;
+        display: none;
         margin-bottom: 20px;
         border: 2px solid #ccc;
         background-color: white;
@@ -51,7 +51,7 @@
     }
 
     .records td {
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 10px 0;

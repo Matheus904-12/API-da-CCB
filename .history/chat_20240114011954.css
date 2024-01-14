@@ -21,12 +21,14 @@
         position: fixed;
         top: 90vh;
         left: 80vw;
-        background-color: var(--primary-color);
+        background-color: black;
         border: none;
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 1001;
+        z-index: 1001;        
+        background: url(adicionar-usuario.png);
+
     }
 
     .button.mobile img {
@@ -51,7 +53,7 @@
     }
 
     .records td {
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 10px 0;

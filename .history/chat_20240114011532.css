@@ -33,6 +33,7 @@
         width: 60%;
         height: 60%;
         filter: invert(1);
+        background-image: srcadicionar-usuario;
     }
 
     .records th.mobile,
@@ -51,7 +52,7 @@
     }
 
     .records td {
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 10px 0;
