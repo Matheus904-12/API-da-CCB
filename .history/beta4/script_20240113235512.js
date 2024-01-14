@@ -69,6 +69,7 @@ const saveClient = () => {
     }
 }
 
+
 const createRow = (client, index) => {
     const newRow = document.createElement('tr')
     newRow.innerHTML = `

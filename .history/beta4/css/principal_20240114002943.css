@@ -17,7 +17,7 @@ body{
     flex-direction: column;
     font-family: 'karla', sans-serif;
     position:relative;
-    background-color: #0f0f0f;
+    ba
 }
 
 header{
@@ -45,7 +45,7 @@ main{
     box-shadow: 2px 2px 10px var(--shadow-color);
     gap: 20px;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: #5e5e5e;
 }
 
 main, th {
@@ -57,9 +57,24 @@ footer{
     font-weight: 200;
     font-style: italic;
     padding: 20px;
-    color: white;
 }
 
 
 
+@media (max-width:480px){
+    header{
+        position:fixed;
+        width:100%;
+    }
+    .header-title{
+        font-size: 1.5rem;
+        
+    }
 
+    main{
+        padding: 0;
+        margin: 20px 0 0 0;
+        width:100%;
+        box-shadow: none;
+    }
+}
