@@ -97,12 +97,11 @@ const updateTable = () => {
 }
 
 const fillFields = (client) => {
-    document.getElementById('auxiliar').value = client.auxiliar
+    document.getElementById('auxiliar').value = client.auli
     document.getElementById('nome').value = client.nome
     document.getElementById('livro').value = client.livro
     document.getElementById('capitulo').value = client.capitulo
     document.getElementById('versiculo').value = client.versiculo
-    document.getElementById('data').value = client.data
     document.getElementById('nome').dataset.index = client.index
 }
 

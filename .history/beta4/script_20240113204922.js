@@ -43,13 +43,13 @@ const clearFields = () => {
     const fields = document.querySelectorAll('.modal-field')
     fields.forEach(field => field.value = "")
     document.getElementById('nome').dataset.index = 'new'
-    document.querySelector(".modal-header>h2").textContent  = 'Novo Versículo'
+    document.querySelector(".modal-header>h2").textContent  = 'Novo Cliente'
 }
 
 const saveClient = () => {
     if (isValidFields()) {
         const client = {
-            auxiliar: document.getElementById('auxiliar'),
+            gender: document.getElementById('auxiliar'),
             nome: document.getElementById('nome').value,
             livro: document.getElementById('livro').value,
             capitulo: document.getElementById('capitulo').value,
@@ -97,12 +97,10 @@ const updateTable = () => {
 }
 
 const fillFields = (client) => {
-    document.getElementById('auxiliar').value = client.auxiliar
     document.getElementById('nome').value = client.nome
-    document.getElementById('livro').value = client.livro
-    document.getElementById('capitulo').value = client.capitulo
-    document.getElementById('versiculo').value = client.versiculo
-    document.getElementById('data').value = client.data
+    document.getElementById('livro').value = client.email
+    document.getElementById('capitulo').value = client.celular
+    document.getElementById('versiculo').value = client.cidade
     document.getElementById('nome').dataset.index = client.index
 }
 
