@@ -173,10 +173,7 @@
         margin: 5px 0;
     }
 
-    .records th {
-        padding-left: 1px;
-        margin: 40px 0;
-    }
+    .records
 
     .modal-content {
         max-width: 600px;
@@ -185,6 +182,5 @@
     #contadorRegistros {
         font-size: 1.2rem;
     }
-
 }
 

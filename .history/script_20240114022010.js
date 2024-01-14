@@ -16,7 +16,7 @@ const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.str
 
 const updateCounter = () => {
     const counterElement = document.getElementById('contadorRegistros');
-    counterElement.textContent = `${contadorRegistros} recitativo adicionado`;
+    counterElement.textContent = `${contadorRegistros} recitativos adicionados`;
 };
 
 // CRUD - create read update delete
@@ -95,12 +95,12 @@ const createRow = (client, index) => {
         <td>${client.capitulo}</td>
         <td>${client.data}</td>
         <td>
-            <button type="button" class="button green icon" id="edit-${index}"><i class="fas fa-edit"></i></button>
-            <button type="button" class="button red icon" id="delete-${index}"><i class="fas fa-trash-alt"></i></button>
+            <button type="button" class="button green" id="edit-${index}">Editar</button>
+            <button type="button" class="button red" id="delete-${index}" >Excluir</button>
         </td>
-    `;
-    document.querySelector('#tableClient>tbody').appendChild(newRow);
-};
+    `
+    document.querySelector('#tableClient>tbody').appendChild(newRow)
+}
 
 const clearTable = () => {
     const rows = document.querySelectorAll('#tableClient>tbody tr')

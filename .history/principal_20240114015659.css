@@ -5,7 +5,7 @@
 }
 
 :root{
-    --primary-color: #000000;
+    --primary-color: #5e5e5e;
     --secundary-color: #cfcfcf;
     --shadow-color: #CCC;
     --text-color: #FFF;
@@ -17,7 +17,7 @@ body{
     flex-direction: column;
     font-family: 'karla', sans-serif;
     position:relative;
-    background-color: #292929;
+    background-color: #0f0f0f;
 }
 
 header{

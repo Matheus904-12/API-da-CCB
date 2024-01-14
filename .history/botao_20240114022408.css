@@ -51,13 +51,3 @@ button.red{
     color: #bdbd00;
     margin-top: 10px;
 }
-
-.button.icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.button.icon i {
-    font-size: 1.2rem; /* Ajuste o tamanho do ícone conforme necessário */
-}

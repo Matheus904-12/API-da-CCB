@@ -1,7 +1,5 @@
 'use strict'
 
-let contadorRegistros = 0;
-
 const openModal = () => document.getElementById('modal')
     .classList.add('active')
 
@@ -14,41 +12,26 @@ const closeModal = () => {
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client')) ?? []
 const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.stringify(dbClient))
 
-const updateCounter = () => {
-    const counterElement = document.getElementById('contadorRegistros');
-    counterElement.textContent = `${contadorRegistros} recitativo adicionado`;
-};
-
 // CRUD - create read update delete
-// Modificação na função deleteClient para decrementar o contador local
 const deleteClient = (index) => {
-    const dbClient = readClient();
-    dbClient.splice(index, 1);
-    setLocalStorage(dbClient);
-    contadorRegistros--;
-    updateCounter(); // Chama a função para atualizar o contador
-};
+    const dbClient = readClient()
+    dbClient.splice(index, 1)
+    setLocalStorage(dbClient)
+}
 
-
-// Modificação na função updateClient para chamar a função updateCounter
 const updateClient = (index, client) => {
-    const dbClient = readClient();
-    dbClient[index] = client;
-    setLocalStorage(dbClient);
-    updateCounter(); // Chama a função para atualizar o contador
-};
+    const dbClient = readClient()
+    dbClient[index] = client
+    setLocalStorage(dbClient)
+}
 
 const readClient = () => getLocalStorage()
 
-// Modificação na função createClient para incrementar o contador local
 const createClient = (client) => {
-    const dbClient = getLocalStorage();
-    dbClient.push(client);
-    setLocalStorage(dbClient);
-    contadorRegistros++;
-    updateCounter(); // Chama a função para atualizar o contador
-};
-
+    const dbClient = getLocalStorage()
+    dbClient.push (client)
+    setLocalStorage(dbClient)
+}
 
 const isValidFields = () => {
     return document.getElementById('form').reportValidity()
@@ -60,7 +43,7 @@ const clearFields = () => {
     const fields = document.querySelectorAll('.modal-field')
     fields.forEach(field => field.value = "")
     document.getElementById('nome').dataset.index = 'new'
-    document.querySelector(".modal-header>h2").textContent  = 'Novo Recitativo'
+    document.querySelector(".modal-header>h2").textContent  = 'Novo Versículo'
 }
 
 const saveClient = () => {
@@ -95,12 +78,12 @@ const createRow = (client, index) => {
         <td>${client.capitulo}</td>
         <td>${client.data}</td>
         <td>
-            <button type="button" class="button green icon" id="edit-${index}"><i class="fas fa-edit"></i></button>
-            <button type="button" class="button red icon" id="delete-${index}"><i class="fas fa-trash-alt"></i></button>
+            <button type="button" class="button green" id="edit-${index}">Editar</button>
+            <button type="button" class="button red" id="delete-${index}" >Excluir</button>
         </td>
-    `;
-    document.querySelector('#tableClient>tbody').appendChild(newRow);
-};
+    `
+    document.querySelector('#tableClient>tbody').appendChild(newRow)
+}
 
 const clearTable = () => {
     const rows = document.querySelectorAll('#tableClient>tbody tr')

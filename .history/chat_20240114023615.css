@@ -174,8 +174,7 @@
     }
 
     .records th {
-        padding-left: 1px;
-        margin: 40px 0;
+        pa
     }
 
     .modal-content {
@@ -185,6 +184,5 @@
     #contadorRegistros {
         font-size: 1.2rem;
     }
-
 }
 

@@ -154,7 +154,7 @@
 
     .button.mobile {
         top: 70vh;
-        left: 75vw;
+        left: 85vw;
         width: 110px;
         height: 60px;
     }
@@ -175,7 +175,7 @@
 
     .records th {
         padding-left: 1px;
-        margin: 40px 0;
+        left: 1px;
     }
 
     .modal-content {
@@ -185,6 +185,5 @@
     #contadorRegistros {
         font-size: 1.2rem;
     }
-
 }
 

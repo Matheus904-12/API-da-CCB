@@ -16,19 +16,17 @@ const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.str
 
 const updateCounter = () => {
     const counterElement = document.getElementById('contadorRegistros');
-    counterElement.textContent = `${contadorRegistros} recitativo adicionado`;
+    counterElement.textContent = `${contadorRegistros} recitativos adicionados`;
 };
 
 // CRUD - create read update delete
-// Modificação na função deleteClient para decrementar o contador local
+// Modificação na função deleteClient para chamar a função updateCounter
 const deleteClient = (index) => {
     const dbClient = readClient();
     dbClient.splice(index, 1);
     setLocalStorage(dbClient);
-    contadorRegistros--;
     updateCounter(); // Chama a função para atualizar o contador
 };
-
 
 // Modificação na função updateClient para chamar a função updateCounter
 const updateClient = (index, client) => {
@@ -40,15 +38,13 @@ const updateClient = (index, client) => {
 
 const readClient = () => getLocalStorage()
 
-// Modificação na função createClient para incrementar o contador local
+// Modificação na função createClient para chamar a função updateCounter
 const createClient = (client) => {
     const dbClient = getLocalStorage();
     dbClient.push(client);
     setLocalStorage(dbClient);
-    contadorRegistros++;
     updateCounter(); // Chama a função para atualizar o contador
 };
-
 
 const isValidFields = () => {
     return document.getElementById('form').reportValidity()
@@ -95,12 +91,12 @@ const createRow = (client, index) => {
         <td>${client.capitulo}</td>
         <td>${client.data}</td>
         <td>
-            <button type="button" class="button green icon" id="edit-${index}"><i class="fas fa-edit"></i></button>
-            <button type="button" class="button red icon" id="delete-${index}"><i class="fas fa-trash-alt"></i></button>
+            <button type="button" class="button green" id="edit-${index}">Editar</button>
+            <button type="button" class="button red" id="delete-${index}" >Excluir</button>
         </td>
-    `;
-    document.querySelector('#tableClient>tbody').appendChild(newRow);
-};
+    `
+    document.querySelector('#tableClient>tbody').appendChild(newRow)
+}
 
 const clearTable = () => {
     const rows = document.querySelectorAll('#tableClient>tbody tr')
