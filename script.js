@@ -168,6 +168,7 @@ document.querySelector('#tableClient>tbody')
 document.getElementById('cancelar')
     .addEventListener('click', closeModal)
 
+<<<<<<< HEAD
     
 
  //   MOBILE - Efeito de editar e apagar
@@ -203,3 +204,6 @@ function showButtons(event) {
     }
 }
 
+=======
+ 
+>>>>>>> c7cadf96569855e80ebd59c905f0c67be18b7ee2
